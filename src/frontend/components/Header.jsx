@@ -28,20 +28,18 @@ const Header = (props) => {
         <div className='header__menu--profile'>
           {hasUser ?
             <img src={gravatar(user.email)} alt={user.email} /> :
-            <img src={userIcon} alt='' />
-          }
+            <img src={userIcon} alt='' />}
           <p>Perfil</p>
         </div>
         <ul>
           {hasUser ?
             <li><a href='/'>{user.name}</a></li> :
-            null
-          }
+            null}
           {hasUser ?
             <li><a href='#logout' onClick={handleLogout}>Cerrar Sesión</a></li> : (
               <li>
                 <Link to='/login'>
-                Iniciar sesión
+                  Iniciar sesión
                 </Link>
               </li>
             )}
